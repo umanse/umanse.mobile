@@ -457,6 +457,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('cordova', ['copy:all', 'cordova:build']);
 
+  grunt.registerTask('cordova-dev', ['clean:dist', 'copy:all']);
+
   grunt.registerTask('coverage', ['karma:continuous', 'connect:coverage:keepalive']);
 
   grunt.registerTask('default', [
