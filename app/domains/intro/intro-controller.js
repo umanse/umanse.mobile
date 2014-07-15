@@ -5,7 +5,7 @@ angular.module('UmanseApp')
  
   // Called to navigate to the main app
   $scope.startApp = function() {
-    $state.go('app.playlists');
+    $state.go('app.grouplists');
   };
 
   // Called each time the slide changes
@@ -61,7 +61,7 @@ angular.module('UmanseApp')
     $timeout(function() {
       $ionicLoading.hide();
       $scope.closeLoginModal();
-      $state.go('app.playlists');
+      $state.go('app.grouplists');
     }, 1000);
   }
 

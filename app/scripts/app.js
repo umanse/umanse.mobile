@@ -31,29 +31,31 @@ angular.module('UmanseApp', [
       controller: 'MainCtrl'
     })
 
-    .state('app.browse', {
-      url: '/browse',
+    .state('app.board', {
+      url: '/board',
       views: {
         'menuContent' :{
-          templateUrl: 'domains/main/browse/browse.html'
+          templateUrl: 'domains/main/board/board.html',
+          controller: 'BoardCtrl'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.grouplists', {
+      url: '/grouplists',
       views: {
         'menuContent' :{
-          templateUrl: 'domains/main/playlists/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'domains/main/grouplists/grouplists.html',
+          controller: 'GrouplistsCtrl'
         }
       }
     })
 
     .state('app.single', {
-      url: '/playlists/:playlistId',
+      url: '/grouplists/:grouplistId',
       views: {
         'menuContent' :{
-          templateUrl: 'domains/main/playlists/playlist/playlist.html'
+          templateUrl: 'domains/main/grouplists/board/group-board.html',
+          controller: 'GroupBoardCtrl'
         }
       }
     });
