@@ -34,10 +34,6 @@
 
 
 
- > remove plugin :
- > $ cordova plugin remove org.apache.cordova.console
-
-
 
 
 ## Developer Guides 
