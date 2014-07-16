@@ -23,7 +23,8 @@ module.exports = function (grunt) {
       app: 'app',
       scripts: 'scripts',
       styles: 'styles',
-      images: 'images'
+      images: 'images',
+      domains: 'domains'
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -38,7 +39,9 @@ module.exports = function (grunt) {
         }
       },
       styles: {
-        files: ['<%= yeoman.app %>/<%= yeoman.styles %>/**/*.css'],
+        files: [
+          '<%= yeoman.app %>/<%= yeoman.styles %>/**/*.css',
+          '<%= yeoman.app %>/domains/**/*.css' ],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
@@ -454,6 +457,8 @@ module.exports = function (grunt) {
     'htmlmin',
     'cordova:build'
   ]);
+  
+  grunt.registerTask('bower', ['bower-install']);
 
   grunt.registerTask('cordova', ['copy:all', 'cordova:build']);
 

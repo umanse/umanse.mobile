@@ -9,7 +9,8 @@
 angular.module('UmanseApp', [
   'ionic',
   'restangular',
-  'ngCordova'
+  'ngCordova',
+  'google-maps'
 ])
 
 
@@ -37,6 +38,15 @@ angular.module('UmanseApp', [
         'menuContent' :{
           templateUrl: 'domains/main/board/board.html',
           controller: 'BoardCtrl'
+        }
+      }
+    })
+    .state('app.board-maps', {
+      url: '/board-maps',
+      views: {
+        'menuContent' :{
+          templateUrl: 'domains/main/board/board-maps.html',
+          controller: 'BoardMapsCtrl'
         }
       }
     })

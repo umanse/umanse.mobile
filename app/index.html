@@ -16,10 +16,20 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/app.css">
     <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/domains.css -->
+    <link rel="stylesheet" href="domains/main/board/board-maps.css">
+    <!-- endbuild -->
+
+
+
+
   </head>
 
   <body ng-app="UmanseApp">
     <ion-nav-view></ion-nav-view>
+
+    <script src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- <script src="vendor/someContribJs.js"></script> -->
@@ -34,10 +44,10 @@
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/restangular/dist/restangular.js"></script>
     <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
-
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers.js"></script>
@@ -50,8 +60,11 @@
     
     <script src="domains/main/main-controller.js"></script>
     <script src="domains/main/board/board-controller.js"></script>
+    <script src="domains/main/board/board-maps-controller.js"></script>
+
     <script src="domains/main/grouplists/grouplists-controller.js"></script>
     <script src="domains/main/grouplists/board/group-board-controller.js"></script>
+
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/common.js -->
@@ -60,6 +73,5 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
   </body>
 </html>

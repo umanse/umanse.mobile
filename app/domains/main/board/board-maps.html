@@ -1,0 +1,16 @@
+<ion-view title="Board">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header" scroll="false">
+    <google-map center="map.center" draggable="true" zoom="map.zoom">
+      <marker coords='map.markers[0]' icon="'images/night01.png'">
+      </marker>
+
+      <marker coords='map.markers[1]' icon="'images/warrior01.png'">
+      </marker>
+
+    </google-map>
+    
+  </ion-content>
+</ion-view>
